@@ -4,11 +4,11 @@ using UnityEngine;
 using System;
 using System.Threading.Tasks;
 
-
+//codes the speed powerup
 public class FPowerup : MonoBehaviour
 {
-	private GameObject player;
-	public CameraMovement Fcamera;
+	private GameObject player; //UFO
+	public CameraMovement Fcamera; //creates a camera object
 
 	// Start is called before the first frame update
 	void Start()
@@ -20,12 +20,12 @@ public class FPowerup : MonoBehaviour
 	{
 		if (collision.tag == "Border")
 		{
-			Destroy(this.gameObject);
+			Destroy(this.gameObject); //when obstacle hits border it gets destroyed
 		}
 
 		else if (collision.tag == "Player")
 		{
-			Fcamera.cameraSpeed = 25f;
+			Fcamera.cameraSpeed = 25f; //when powerup hits player speed of camera inc. to 25
 			await putDelay();
 			resetSpeed();
 
@@ -34,11 +34,11 @@ public class FPowerup : MonoBehaviour
 
 	async Task putDelay()
 	{
-		await Task.Delay(10000);
+		await Task.Delay(10000); //puts a wait time of 10 seconds
 	}
 
 	public void resetSpeed()
 	{
-		Fcamera.cameraSpeed = 15f;
+		Fcamera.cameraSpeed = 15f; //reverts code back to normal camera speed
 	}
 }
