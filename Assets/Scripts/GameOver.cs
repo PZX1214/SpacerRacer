@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+//allows user to see reset button
 public class GameOver : MonoBehaviour
 {	
 	public GameObject gameOverPanel;
@@ -10,7 +10,7 @@ public class GameOver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(GameObject.FindGameObjectWithTag("Player") == null)
+        if(GameObject.FindGameObjectWithTag("Player") == null) 
 		{
 			gameOverPanel.SetActive(true);
 		}
