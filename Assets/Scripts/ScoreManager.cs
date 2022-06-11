@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+//keeps track of the score
 public class ScoreManager : MonoBehaviour
 {
 	public Text scoreText;
@@ -14,7 +14,7 @@ public class ScoreManager : MonoBehaviour
         if(GameObject.FindGameObjectWithTag("Player") != null)
 		{
 			score += 1 * Time.deltaTime;
-			scoreText.text = ((int)score).ToString() + " light years";
+			scoreText.text = ((int)score).ToString() + " light years"; //returns the amount of light years traveled i.e. seconds surived
 		}
     }
 }
