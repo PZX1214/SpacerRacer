@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//spawns the obstacles in
 public class SpawnObstacles : MonoBehaviour
 {
+	//initializes or declares all the variables
 	public GameObject obstacle;
 	public float maxX;
 	public float minX;
@@ -21,7 +22,7 @@ public class SpawnObstacles : MonoBehaviour
 		if(Time.time > spawnTime)
 		{
 			Spawn();
-			spawnTime = Time.time + timeBetweenSpawn + (xyz);
+			spawnTime = Time.time + timeBetweenSpawn + (xyz); //sets the time between each spawn of asteroid
 		}
         
     }
@@ -31,10 +32,10 @@ public class SpawnObstacles : MonoBehaviour
 		float randomX = Random.Range(minX, maxX);
 		float randomY = Random.Range(minY, maxY);
 		counter += 1;
-		Instantiate(obstacle, transform.position + new Vector3(randomX, randomY, 0), transform.rotation);
+		Instantiate(obstacle, transform.position + new Vector3(randomX, randomY, 0), transform.rotation); //spawns the asteroid based off of variables
 		
 		
-		if (counter > 25)
+		if (counter > 25) //adjusts the speed of the asteroids as time goes on
 		{
 			xyz -= 0.008;
 		} 
