@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+// spawns the powerups in -- we ended up not using this but decided to keep it in for reference
 public class SpawnPowerup : MonoBehaviour
 {
+	//declares or initializes all the variables
 	public GameObject powerup;
 	public float PmaxX;
 	public float PminX;
@@ -21,7 +22,7 @@ public class SpawnPowerup : MonoBehaviour
 		if (Time.time > PspawnTime)
 		{
 			pSpawn();
-			PspawnTime = Time.time + PtimeBetweenSpawn + (Pxyz);
+			PspawnTime = Time.time + PtimeBetweenSpawn + (Pxyz); //sets the time between each spawn
 		}
 
 	}
@@ -31,6 +32,6 @@ public class SpawnPowerup : MonoBehaviour
 		float PrandomX = Random.Range(PminX, PmaxX);
 		float PrandomY = Random.Range(PminY, PmaxY);
 		Pcounter += 1;
-		Instantiate(powerup, transform.position + new Vector3(PrandomX, PrandomY, 0), transform.rotation);
+		Instantiate(powerup, transform.position + new Vector3(PrandomX, PrandomY, 0), transform.rotation); //spawns powerup in at random location based off of variables
 	}
 }
