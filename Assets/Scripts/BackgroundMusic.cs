@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//music - we didn't use it
 public class BackgroundMusic : MonoBehaviour
 {
 	private static BackgroundMusic backgroundMusic;
