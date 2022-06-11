@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//creates obstacles
 public class Obstacle : MonoBehaviour
 {
-	private GameObject player;
+	private GameObject player; //UFO
 	
     // Start is called before the first frame update
     void Start()
@@ -16,12 +16,12 @@ public class Obstacle : MonoBehaviour
 	{
 		if(collision.tag == "Border")
 		{
-			Destroy(this.gameObject);
+			Destroy(this.gameObject); //when asteroid comes in contact with border it is destroyed
 		}
 		
 		else if(collision.tag == "Player")
 		{
-			Destroy(player.gameObject);
+			Destroy(player.gameObject); //when asteroid comes in contact with player, player dies
 		}
 	}
 }
