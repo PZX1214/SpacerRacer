@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//makes the background infinitely loop making it seem like it is moving
 public class LoopingBackground : MonoBehaviour
 {
 	public float backgroundSpeed;
